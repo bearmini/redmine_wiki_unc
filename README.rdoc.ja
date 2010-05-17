@@ -9,8 +9,8 @@
 
 1. 以下のコマンドを実行します。
 
-   $ cd $(REDMINE_HOME)
-   $ ruby script/plugin install git://github.com/bearmini/redmine_wiki_unc.git
+     $ cd $(REDMINE_HOME)
+     $ ruby script/plugin install git://github.com/bearmini/redmine_wiki_unc.git
 
 2. Redmine を再起動します。
 

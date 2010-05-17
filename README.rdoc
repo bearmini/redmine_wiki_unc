@@ -10,8 +10,8 @@ This plugin provides ability to make a link to files on your server share.
 
 1. Run the commands below:
 
-   $ cd $(REDMINE_HOME)
-   $ ruby script/plugin install git://github.com/bearmini/redmine_wiki_unc.git
+     $ cd $(REDMINE_HOME)
+     $ ruby script/plugin install git://github.com/bearmini/redmine_wiki_unc.git
 
 2. Restart Redmine
 
