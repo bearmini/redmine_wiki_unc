@@ -1,36 +1,36 @@
 = Redmine plugin : wiki_unc
 
-== ����ϲ���
+== これは何？
 
-���Υץ饰�����Ȥ��ȡ�Redmine �� Wiki �ڡ������顢�ͥåȥ���Υ����о�ζ�ͭ�ե�����ؤΥ�󥯤��뤳�Ȥ��Ǥ��ޤ���
+このプラグインを使うと、Redmine の Wiki ページから、ネットワークのサーバ上の共有ファイルへのリンクを作ることができます。
 
 
-== ���󥹥ȡ�����ˡ
+== インストール方法
 
-1. �ʲ��Υ��ޥ�ɤ�¹Ԥ��ޤ���
+1. 以下のコマンドを実行します。
 
      $ cd $(REDMINE_HOME)
      $ ruby script/plugin install git://github.com/bearmini/redmine_wiki_unc.git
 
-2. Redmine ��Ƶ�ư���ޤ���
+2. Redmine を再起動します。
 
 
-== �Ȥ���
+== 使い方
 
-1. Wiki ��ˡ���Ȥ���Ȥ����ʤ�ɤ��Ǥ⡢�ʲ��Τ褦�˽񤯤��Ȥ��Ǥ��ޤ���
+1. Wiki 記法が使えるところならどこでも、以下のように書くことができます。
    
      {{unc(\\server-name\dir\to\file)}}
 
-   �ѥ�����ʬ�ϡ��������ץ����餫�饳�ԡ����Ƥ�����ΤǤ���
+   パスの部分は、エクスプローラからコピーしてきたものです。
 
-   ����ǡ��ʲ��Τ褦�� HTML ��������������ޤ���
+   これで、以下のような HTML タグが生成されます。
 
      <a href="file://///server-name/dir/to/file">\\server-name\dir\to\file</a>
 
-   '/' �� 5 �����Ϥ�����֤�����Ǥ��ޤ��͡�:)
+   '/' を 5 回入力する時間を節約できますね！:)
 
-2. Firefox �򤪻Ȥ��ʤ顢LocalLink �ץ饰����򤤤����ɤ����⤷��ޤ���
-   IE ��ɸ��� file:// ����������갷�����Ȥ��Ǥ���Τǡ����ꤢ��ޤ���
-   ����¾�Υ֥饦���ǤϤɤ�������ɤ�������¸�������϶����Ƥ���������
+2. Firefox をお使いなら、LocalLink プラグインをいれると良いかもしれません。
+   IE は標準で file:// スキームを取り扱うことができるので、問題ありません。
+   その他のブラウザではどうすれば良いか、ご存じの方は教えてください。
 
 
