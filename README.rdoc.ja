@@ -7,7 +7,7 @@
 
 == インストール方法
 
-1. git がインストールされている環境の場合
+A. git がインストールされている環境の場合
    1. 以下のコマンドを実行します。
 
         $ cd $(REDMINE_HOME)
@@ -15,7 +15,7 @@
 
    2. Redmine を再起動します。
 
-2. git がインストールされていない環境の場合
+B. git がインストールされていない環境の場合
    1. このプラグインのファイルが zip にまとめられたバージョンを
       以下の URL からダウンロードします。
       http://github.com/bearmini/redmine_wiki_unc/zipball/master
