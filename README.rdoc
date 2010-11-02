@@ -8,14 +8,31 @@ This plugin provides ability to make a link to files on your server share.
 
 == How to Install
 
-1. Run the commands below:
+1. If you have 'git' installed on your system:
+   1. Run the commands below:
 
-     $ cd $(REDMINE_HOME)
-     $ ruby script/plugin install git://github.com/bearmini/redmine_wiki_unc.git
+        $ cd $(REDMINE_HOME)
+        $ ruby script/plugin install git://github.com/bearmini/redmine_wiki_unc.git
 
-2. Restart Redmine
+   2. Restart Redmine
 
-Note: Currently you don't have to do 'rake db:migrate_plugins' because this plugin does not use DB.
+Note: Currently you don't have to do 'rake db:migrate_plugins' because this plugin does not use DBs.
+
+
+2. Otherwise
+   1. Download an archived version (.zip file) of the plugin from
+      http://github.com/bearmini/redmine_wiki_unc/zipball/master
+
+   2. Unzip it. You are going to have redmine_wiki_unc_xxxxxxx directory.
+      ('xxxxxxx' might be a combination of some characters)
+
+   3. Move the directory into redmine\vendor\plugins\ directory.
+      (You'll get redmine\vendor\plugins\redmine_wiki_unc_xxxxxxx\
+       directory and have some files in the directory.)
+
+   4. Restart Redmine
+
+Note: Currently you don't have to do 'rake db:migrate_plugins' because this plugin does not use DBs.
 
 
 
