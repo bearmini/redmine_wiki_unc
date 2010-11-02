@@ -8,7 +8,7 @@ This plugin provides ability to make a link to files on your server share.
 
 == How to Install
 
-1. If you have 'git' installed on your system:
+A. If you have 'git' installed on your system:
    1. Run the commands below:
 
         $ cd $(REDMINE_HOME)
@@ -16,10 +16,8 @@ This plugin provides ability to make a link to files on your server share.
 
    2. Restart Redmine
 
-Note: Currently you don't have to do 'rake db:migrate_plugins' because this plugin does not use DBs.
 
-
-2. Otherwise
+B. Otherwise
    1. Download an archived version (.zip file) of the plugin from
       http://github.com/bearmini/redmine_wiki_unc/zipball/master
 
@@ -31,6 +29,7 @@ Note: Currently you don't have to do 'rake db:migrate_plugins' because this plug
        directory and have some files in the directory.)
 
    4. Restart Redmine
+
 
 Note: Currently you don't have to do 'rake db:migrate_plugins' because this plugin does not use DBs.
 
