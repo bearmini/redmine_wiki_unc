@@ -42,7 +42,7 @@ Note: Currently you don't have to do 'rake db:migrate_plugins' because this plug
      {{unc(\\server-name\dir\to\file)}}
 
    The path is the thing just copied from Windows Explorer.
-   You need to trim " (double quotation mark) surrounding the path if exists.
+   You need to trim double quotation marks ("...") surrounding the path if exists.
    The path can be containing white-space without the double quotation marks.
    The path cannot be containing comma(,).
 
@@ -52,6 +52,20 @@ Note: Currently you don't have to do 'rake db:migrate_plugins' because this plug
 
    You can save time to type '/' 5 times! :)
 
+
+== How to update the installed version
+
+A. If you have the old version installed using 'git':
+   1. Run the commands below:
+
+        $ cd $(REDMINE_HOME)
+        $ ruby script/plugin update redmine_wiki_unc
+
+   2. Restart Redmine
+
+B. Otherwise
+   1. Repeat the steps for the installation.
+      (Taking a backup -- just copying the plugin directory to other place -- is recomennded)
 
 
 == Tips
