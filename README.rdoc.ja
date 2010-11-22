@@ -1,0 +1,55 @@
+= Redmine plugin : wiki_unc
+
+== これは何？
+
+このプラグインを使うと、Redmine の Wiki ページから、ネットワークのサーバ上の共有ファイルへのリンクを作ることができます。
+
+
+== インストール方法
+
+A. git がインストールされている環境の場合
+   1. 以下のコマンドを実行します。
+
+        $ cd $(REDMINE_HOME)
+        $ ruby script/plugin install git://github.com/bearmini/redmine_wiki_unc.git
+
+   2. Redmine を再起動します。
+
+B. git がインストールされていない環境の場合
+   1. このプラグインのファイルが zip にまとめられたバージョンを
+      以下の URL からダウンロードします。
+      http://github.com/bearmini/redmine_wiki_unc/zipball/master
+
+   2. ダウンロードした zip ファイルを展開します。
+      redmine_wiki_unc_xxxxxxx という名前のディレクトリができるはずです。
+      (xxxxxxx の部分は、英数字の組み合わせになります)
+
+   3. そのディレクトリを、redmine/vendor/plugins/ ディレクトリに
+      移動します。
+      (つまり、redmine/vendor/plugins/redmine_wiki_unc_xxxxxxx/ という
+       名前のディレクトリができて、その中にいくつかのファイルが
+       存在する状態になるはずです。)
+
+   4. Redmine を再起動します。
+
+
+== 使い方
+
+1. Wiki 記法が使えるところならどこでも、以下のように書くことができます。
+   
+     {{unc(\\server-name\dir\to\file)}}
+
+   パスの部分は、エクスプローラからコピーしてきたものです。
+
+   これで、以下のような HTML タグが生成されます。
+
+     <a href="file://///server-name/dir/to/file">\\server-name\dir\to\file</a>
+
+   '/' を 5 回入力する時間を節約できますね！:)
+
+2. Firefox をお使いなら、LocalLink プラグインをいれると良いかもしれません。
+   IE は標準で file:// スキームを取り扱うことができるので、そのままでファイルへの
+   リンクが問題なく働きます。
+   その他のブラウザではどうすれば良いか、ご存じの方は教えてください。
+
+

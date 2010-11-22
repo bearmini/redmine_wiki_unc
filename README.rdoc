@@ -1,3 +1,56 @@
 = wiki_unc
 
-Description goes here
+== What is this?
+
+This plugin provides ability to make a link to files on your server share.
+
+
+
+== How to Install
+
+A. If you have 'git' installed on your system:
+   1. Run the commands below:
+
+        $ cd $(REDMINE_HOME)
+        $ ruby script/plugin install git://github.com/bearmini/redmine_wiki_unc.git
+
+   2. Restart Redmine
+
+
+B. Otherwise
+   1. Download an archived version (.zip file) of the plugin from
+      http://github.com/bearmini/redmine_wiki_unc/zipball/master
+
+   2. Unzip it. You are going to have redmine_wiki_unc_xxxxxxx directory.
+      ('xxxxxxx' might be a combination of some characters)
+
+   3. Move the directory into redmine\vendor\plugins\ directory.
+      (You'll get redmine\vendor\plugins\redmine_wiki_unc_xxxxxxx\
+       directory and have some files in the directory.)
+
+   4. Restart Redmine
+
+
+Note: Currently you don't have to do 'rake db:migrate_plugins' because this plugin does not use DBs.
+
+
+
+== How to use
+
+1. Wherever you can use Wiki notation, you can write 'unc' macro like this:
+
+     {{unc(\\server-name\dir\to\file)}}
+
+   The path is the thing just copied from Windows Explorer.
+
+   Then you can get HTML tags below:
+
+     <a href="file://///server-name/dir/to/file">\\server-name\dir\to\file</a>
+
+   You can save time to type '/' 5 times! :)
+
+2. If you are using Firefox, you'll be happy with LocalLink plugin.
+   Internet Explorer can handle file:// scheme without any add-ons.
+   For other browsers, please let me know how to work with file:// scheme happily.
+
+
