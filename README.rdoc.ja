@@ -57,8 +57,8 @@ B. git がインストールされていない環境の場合
 A. git を使ってインストールした場合
    1. 以下のコマンドを実行します。
 
-        $ cd $(REDMINE_HOME)
-        $ ruby script/plugin update redmine_wiki_unc
+        $ cd $(REDMINE_HOME)/vendor/plugins/redmine_wiki_unc
+        $ git pull origin master
 
    2. Redmine を再起動します。
 

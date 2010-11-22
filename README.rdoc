@@ -58,8 +58,8 @@ Note: Currently you don't have to do 'rake db:migrate_plugins' because this plug
 A. If you have the old version installed using 'git':
    1. Run the commands below:
 
-        $ cd $(REDMINE_HOME)
-        $ ruby script/plugin update redmine_wiki_unc
+        $ cd $(REDMINE_HOME)/vendor/plugins/redmien_wiki_unc
+        $ git pull origin master
 
    2. Restart Redmine
 
