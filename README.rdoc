@@ -2,7 +2,7 @@
 
 == What is this?
 
-This plugin provides ability to make a link to files on your server share.
+This plugin provides an ability to make a link to files on your server share.
 
 
 
@@ -26,7 +26,7 @@ B. Otherwise
 
    3. Move the directory into redmine\vendor\plugins\ directory.
       (You'll get redmine\vendor\plugins\redmine_wiki_unc_xxxxxxx\
-       directory and have some files in the directory.)
+      directory and have some files in the directory.)
 
    4. Restart Redmine
 
@@ -42,15 +42,31 @@ Note: Currently you don't have to do 'rake db:migrate_plugins' because this plug
      {{unc(\\server-name\dir\to\file)}}
 
    The path is the thing just copied from Windows Explorer.
+   You need to trim " (double quotation mark) surrounding the path if exists.
+   The path can be containing white-space without the double quotation marks.
+   The path cannot be containing comma(,).
 
-   Then you can get HTML tags below:
+2. Then you'll get the HTML tags below:
 
      <a href="file://///server-name/dir/to/file">\\server-name\dir\to\file</a>
 
    You can save time to type '/' 5 times! :)
 
+
+
+== Tips
+
+1. You can specify a 'label' instead of displaying UNC path.
+
+     {{unc(\\server-name\dir\to\file, Label of the file)}}
+
+   Then you'll get the HTML tags below:
+
+     <a href="file://///server-name/dir/to/file">Label of the file</a>
+
 2. If you are using Firefox, you'll be happy with LocalLink plugin.
+   (Update: The plugin is currently not working with the latest version of Firefox.)
+
    Internet Explorer can handle file:// scheme without any add-ons.
    For other browsers, please let me know how to work with file:// scheme happily.
-
 
