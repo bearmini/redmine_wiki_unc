@@ -81,6 +81,10 @@ B. Otherwise
 2. If you are using Firefox, you'll be happy with LocalLink plugin.
    (Update: The plugin is currently not working with the latest version of Firefox.)
 
+   If you are using Chrome, you'll be happy with LocalLinks plugin.
+   https://chrome.google.com/webstore/search/LocalLinks
+
    Internet Explorer can handle file:// scheme without any add-ons.
+
    For other browsers, please let me know how to work with file:// scheme happily.
 
