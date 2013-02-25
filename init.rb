@@ -10,7 +10,7 @@ class UncHelper
   end
 
   def unc_to_file_proto(str)
-    RAILS_DEFAULT_LOGGER.info "str == #{str}, is_unc? == #{is_unc?(str)}, head=#{@head.to_s}"
+    Rails.logger.info "str == #{str}, is_unc? == #{is_unc?(str)}, head=#{@head.to_s}"
     return "" if !is_unc?(str)
     str.gsub(@head, "file://///").gsub(/\\/, "/")
   end
@@ -54,7 +54,7 @@ DESC
 
     macro :unc do |obj, args|
       h = UncHelper.new
-      h.get_tag(args)
+      h.get_tag(args).html_safe
     end
   end
 end
