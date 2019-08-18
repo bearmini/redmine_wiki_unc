@@ -1,4 +1,5 @@
 require 'redmine'
+require_dependency 'redmine_wiki_unc_hooks'
 
 class UncHelper
   def initialize
@@ -42,7 +43,7 @@ Redmine::Plugin.register :redmine_wiki_unc do
   name 'Redmine Wiki Unc plugin'
   author 'Takashi Oguma'
   description 'This is a plugin for macro of Redmine Wiki'
-  version '0.0.3'
+  version '0.0.4'
 
   Redmine::WikiFormatting::Macros.register do
     desc <<DESC
