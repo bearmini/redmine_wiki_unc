@@ -90,4 +90,4 @@ B. Otherwise
 
 3. You can create a link from the Wiki Toolbar button.
 
-   {toolbar}[/toolbar.png]
+   [link:toolbar.png]
