@@ -17,6 +17,11 @@
   var getNormalizedAddress = function(inputAddress) {
     return inputAddress.val().replace(/"/g, '').trim();
   };
+  var getEncodedAddress = function(inputAddress) {
+    return getNormalizedAddress(inputAddress).replace(/ /g,  '%20')
+                                             .replace(/\(/g, '%28')
+                                             .replace(/\)/g, '%29');
+  };
   var isInputValid = function(inputAddress) {
     return getNormalizedAddress(inputAddress) != '';
   };
@@ -83,9 +88,7 @@
               link = '{{unc(' + address + ', ' + text + ')}}';
             }
           } else {
-            var encoded = address.replace(' ', '%20')
-                                 .replace('(', '%28')
-                                 .replace(')', '%29');
+            var encoded = getEncodedAddress(inputAddress);
             if (encoded == text) {
               link = ' ' + encoded + ' ';
             } else {
