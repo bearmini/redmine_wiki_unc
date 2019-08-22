@@ -14,16 +14,16 @@
                 +   '<input type="button" value="Cancel" id="js-redmine-wiki-unc-button-cancel">'
                 + '</p>';
                   
-  var getNormalizedAddress = function(inputAddress) {
+  var getCleanedAddress = function(inputAddress) {
     return inputAddress.val().replace(/"/g, '').trim();
   };
   var getEncodedAddress = function(inputAddress) {
-    return getNormalizedAddress(inputAddress).replace(/ /g,  '%20')
-                                             .replace(/\(/g, '%28')
-                                             .replace(/\)/g, '%29');
+    return getCleanedAddress(inputAddress).replace(/ /g,  '%20')
+                                          .replace(/\(/g, '%28')
+                                          .replace(/\)/g, '%29');
   };
   var isInputValid = function(inputAddress) {
-    return getNormalizedAddress(inputAddress) != '';
+    return getCleanedAddress(inputAddress) != '';
   };
                   
   var button = {
@@ -44,7 +44,7 @@
         inputAddress.keyup(function(){
           if (isInputValid(inputAddress)) {
             buttonOk.prop('disabled', false);
-            tryLink.attr('href', getNormalizedAddress(inputAddress));
+            tryLink.attr('href', getCleanedAddress(inputAddress));
             tryLink.attr('target', '_blank');
           } else {
             buttonOk.prop('disabled', true);
@@ -74,7 +74,7 @@
           }
           hideModal(this);
           
-          var address = getNormalizedAddress(inputAddress);
+          var address = getCleanedAddress(inputAddress);
           var text    = inputText.val().trim();
           if (text == '') {
             text = address;
