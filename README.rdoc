@@ -88,3 +88,6 @@ B. Otherwise
 
    For other browsers, please let me know how to work with file:// scheme happily.
 
+3. You can create a link from the Wiki Toolbar button.
+
+   [link:toolbar.png]
